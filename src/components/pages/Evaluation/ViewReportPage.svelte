@@ -1,3 +1,7 @@
+<script>
+  import 'src/static/css/view-report.print.css';
+</script>
+
 <Page title="{$summaryStore['EVALUATION_TITLE'] ? $summaryStore['EVALUATION_TITLE'] : TRANSLATED.PAGE_TITLE}" pageid="view-report">
 
     <Button on:click="{handleHTMLDownloadClick}">
