@@ -1,0 +1,23 @@
+/* src/styles/view-report.print.css */
+@media print {
+  /* Paper setup */
+  @page { size: A4; margin: 20mm; }
+
+  /* Hide app chrome and non-essential controls */
+  .no-print, nav, .app-header, .app-footer { display: none !important; }
+
+  /* Keep sections intact across pages */
+  h1, h2, h3, .section, .criterion, .summary-block {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Tables & lists behave nicely */
+  table, ul, ol { break-inside: avoid; }
+
+  /* Optional: force a page break before large sections */
+  .page-break { break-before: page; }
+
+  /* Preserve visible focus outlines for keyboard users in PDF readers */
+  :focus { outline: 2px solid #0b5fff; }
+}
