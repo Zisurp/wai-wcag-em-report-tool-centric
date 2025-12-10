@@ -7,6 +7,17 @@
       <span>{TRANSLATED.BUTTON_SAVE_JSON}</span>
     </Button>
 
+<!-- Example: src/routes/evaluation/view-report.svelte -->
+<!-- …existing imports & markup… -->
+
+<div class="download-actions">
+  <!-- Existing actions -->
+  <a class="btn btn-secondary no-print" href={htmlDownloadHref}>Download HTML</a>
+  <a class="btn btn-secondary no-print" href={jsonDownloadHref}>Download JSON</a>
+
+  <!-- New: Download PDF -->
+  <button class="btn btn-primary no-print" aria-label="Download PDF" on:click={() => window.print()}>Download PDF</button>
+
   <Report />
 </Page>
 
